@@ -26,12 +26,14 @@ export default function RecipeList({
     }
   }, [bgTheme]);
 
-  if (recipes.length === 0)
+  newRecipes = Array.from(recipes);
+
+  if (newRecipes.length === 0)
     return <div className="error">No Recipies to Load...</div>;
 
   return (
     <div className="recipe-container">
-      {recipes.map((recipe) => (
+      {newRecipes.map((recipe) => (
         <div key={recipe.id} className="recipe-card">
           <h2 className="Title">{recipe.title}</h2>
           <p className="cookingTime">{recipe.cookingTime} to make</p>
