@@ -1,0 +1,112 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 60vw;
+  margin: 40px auto;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: large;
+  font-weight: 500;
+}
+
+.field input {
+  height: 25px;
+  border-radius: 4px;
+  border: none;
+  padding: 5px 10px;
+  font-size: medium;
+  outline: none;
+}
+
+.field input:focus {
+  border: 2px solid rgba(0, 0, 0, 0.572);
+  padding: 3px 8px;
+}
+
+.field textarea:focus {
+  border: 2px solid rgba(0, 0, 0, 0.572);
+  padding: 3px 8px;
+}
+
+.field textarea {
+  height: 50px;
+  border-radius: 4px;
+  border: none;
+  padding: 5px 10px;
+  font-size: large;
+  outline: none;
+}
+
+.form-container .title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.form-container button {
+  align-self: center;
+  padding: 5px 10px;
+  height: 35px;
+  margin-top: 10px;
+  border: none;
+  background-color: rgba(0, 128, 0, 0.793);
+  color: white;
+  border-radius: 4px;
+  font-size: medium;
+  transition: all ease 0.3s;
+}
+
+.form-container button:hover {
+  background-color: green;
+  transform: scale(1.05);
+}
+
+.btn {
+  display: flex;
+  align-self: center;
+  gap: 20px;
+}
+
+.ingredients {
+  display: flex;
+  align-items: center;
+  gap: 2%;
+}
+
+.ingredients input {
+  width: 80%;
+}
+
+.ingredients button {
+  align-self: stretch;
+  padding: 5px 10px;
+  font-size: medium;
+  width: 8%;
+  margin-top: 0;
+  min-width: 60px;
+}
+
+.btn .reset {
+  background-color: rgb(6, 143, 197);
+}
+
+.btn .reset:hover {
+  background-color: rgb(11, 111, 150);
+}
+
+.form-container p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.ingredients .warning {
+  background-color: rgba(255, 0, 0, 0.727);
+}
+
+.ingredients .warning:hover {
+  background-color: rgba(255, 0, 0, 0.827);
+}

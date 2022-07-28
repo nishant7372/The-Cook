@@ -1,0 +1,100 @@
+{
+  "recipes": [
+    {
+      "id": "1",
+      "title": "Veggie Stew",
+      "ingredients": [
+        "1 Carrot",
+        "1 Leek",
+        "200g Tofu",
+        "300ml Veg stock"
+      ],
+      "method": "1. Pre-heat the oven to 200C/3C/gas 5. Place the carrot, leek and tofu in a large bowl. Add the stock and mix well. 2. Add the rest of the ingredients and mix well. 3. Place the mixture in a large bowl and cover with a lid. 4. Place the lid on the oven and cook for 40 minutes. 5. Serve with a slaw of your choice",
+      "cookingTime": "45 minutes"
+    },
+    {
+      "id": "2",
+      "title": "Veggie Pizza",
+      "ingredients": [
+        "1 Base",
+        "Tomata pasata",
+        "1 Green pepper",
+        "100g Mushrooms"
+      ],
+      "method": "1. Pre-heat the oven to 200C/3C/gas 5. Add the pasata, green pepper and mushrooms to the base. Place the lid on the oven and cook for 30 minutes. 5. Serve with a slaw of your choice",
+      "cookingTime": "35 minutes"
+    },
+    {
+      "id": "3",
+      "title": "Greek Salad",
+      "ingredients": [
+        "1 Onion",
+        "1 Block of Feta",
+        "Olives",
+        "Tomatoes",
+        "Olive Oil"
+      ],
+      "method": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse minima ex rem quis similique eum ratione quaerat, voluptas molestias ut repudiandae delectus voluptates. Eius esse at tenetur ab accusamus excepturi?",
+      "cookingTime": "35 minutes"
+    },
+    {
+      "title": "samosa",
+      "ingredients": [
+        "potato",
+        "besan",
+        "oil",
+        "spices",
+        "yy"
+      ],
+      "method": "create a samosa yourself",
+      "cookingTime": "30 minutes",
+      "id": "C1xbkqt"
+    },
+    {
+      "title": "Matar Paneer",
+      "ingredients": [
+        "matar",
+        "paneer",
+        "onion",
+        "tomato",
+        "oil",
+        "chilly",
+        "salt"
+      ],
+      "method": "do it yourself",
+      "cookingTime": "20 minutes",
+      "id": "1E_JK4U"
+    },
+    {
+      "title": "Aloo-Sabji",
+      "ingredients": [
+        "potato",
+        "tomato",
+        "chillies",
+        "onion",
+        "oil",
+        "salt",
+        "pepper"
+      ],
+      "method": "It will be a shame if u don't know how to make aloo-sabji",
+      "cookingTime": "35 minutes",
+      "id": "HsSga6_"
+    },
+    {
+      "title": "Jalebi",
+      "ingredients": [
+        "floor",
+        "ghee",
+        "maida",
+        "sugar",
+        "yoghurt",
+        "saffron",
+        "cardamom powder",
+        "lemon"
+      ],
+      "method": "Step 1 Prepare the Jalebi batter and let it ferment overnight\nStep 2 Deep fry the Jalebis\nStep 3 Soak the Jalebis in sugar syrup and serve",
+      "cookingTime": "50 minutes",
+      "id": "kWCDFB5"
+    }
+  ]
+}

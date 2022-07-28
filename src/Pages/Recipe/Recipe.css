@@ -1,0 +1,42 @@
+.recipe-box {
+  background-color: white;
+  width: 60vw;
+  max-width: 1200px;
+  min-width: 400px;
+  margin: 10vh auto;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  box-shadow: 2px 3px 3px #888;
+}
+
+.recipe-box li {
+  list-style-type: none;
+  color: #777;
+}
+
+.recipe-box li::after {
+  content: ",";
+}
+
+.recipe-box li:last-child::after {
+  content: ".";
+}
+
+.recipe-box ul {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+}
+
+.recipe-box .method {
+  text-align: left;
+  line-height: 1.5em;
+  color: #333;
+}
+
+.recipe-box .cookingTime {
+  margin-bottom: -25px;
+}

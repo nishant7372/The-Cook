@@ -1,0 +1,122 @@
+/*----------Theme Button Styles----------*/
+
+.theme-btn {
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.theme-container {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 20px;
+  width: 90vw;
+}
+
+/*-----------------------------------------*/
+
+/*--------Navbar Background Styles---------*/
+
+.bg-default {
+  background-color: #54289c;
+}
+.bg-red {
+  background-color: rgb(204, 10, 10);
+}
+.bg-green {
+  background-color: rgba(0, 128, 0, 0.9);
+}
+
+/*----------------------------------------*/
+
+/*---------NavBar Button Styles------------*/
+
+.default.active,
+.default:hover {
+  color: #54289c;
+}
+
+.red.active,
+.red:hover {
+  color: rgb(204, 10, 10);
+}
+
+.green.active,
+.green:hover {
+  color: green;
+}
+
+/*----------------------------------------*/
+
+/*--------Body Background Styles---------*/
+
+.bg-light-default {
+  background-color: rgba(51, 51, 51, 0.2);
+}
+
+.bg-light-red {
+  background-color: rgba(234, 25, 25, 0.18);
+}
+
+.bg-light-green {
+  background-color: rgba(0, 128, 0, 0.19);
+}
+
+/*----------------------------------------*/
+
+/*--------Button Background Styles---------*/
+
+.bg-btn-light-default {
+  background-color: rgba(51, 51, 51, 0.2);
+}
+
+.bg-btn-light-red {
+  background-color: rgba(234, 25, 25, 0.18);
+}
+
+.bg-btn-light-green {
+  background-color: rgba(0, 128, 0, 0.19);
+}
+
+.bg-btn-light-default:hover {
+  background-color: rgba(51, 51, 51, 0.3);
+}
+
+.bg-btn-light-red:hover {
+  background-color: rgba(234, 25, 25, 0.28);
+}
+
+.bg-btn-light-green:hover {
+  background-color: rgba(0, 128, 0, 0.29);
+}
+
+/*----------------------------------------*/
+
+/*--------Button Font Styles---------*/
+
+.font-btn-light-default {
+  color: rgba(51, 51, 51, 0.65);
+}
+
+.font-btn-light-red {
+  color: rgba(234, 25, 25, 0.65);
+}
+
+.font-btn-light-green {
+  color: rgba(0, 128, 0, 0.65);
+}
+
+.font-btn-light-default:hover {
+  color: rgba(51, 51, 51, 0.8);
+}
+
+.font-btn-light-red:hover {
+  color: rgba(234, 25, 25, 0.8);
+}
+
+.font-btn-light-green:hover {
+  color: rgba(0, 128, 0, 0.8);
+}
+
+/*----------------------------------------*/
