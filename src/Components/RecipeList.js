@@ -32,7 +32,7 @@ export default function RecipeList({
   console.log(recipes);
   return (
     <div className="recipe-container">
-      {recipes.map((recipe) => (
+      {recipes["recipes"].map((recipe) => (
         <div key={recipe.id} className="recipe-card">
           <h2 className="Title">{recipe.title}</h2>
           <p className="cookingTime">{recipe.cookingTime} to make</p>
