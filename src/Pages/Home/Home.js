@@ -6,7 +6,7 @@ export default function Home({ btnBgTheme, btnFontTheme }) {
     data: recipes,
     isPending,
     error,
-  } = useFetch("http://localhost:3000/recipes");
+  } = useFetch("https://database-nis.netlify.app/db.json");
 
   return (
     <div>

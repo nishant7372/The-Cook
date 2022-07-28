@@ -8,7 +8,7 @@ export default function Search({ bgTheme }) {
   const queryParams = new URLSearchParams(queryString);
   const query = queryParams.get("q");
 
-  const url = "http://localhost:3000/recipes?q=" + query;
+  const url = "https://database-nis.netlify.app/db.json?q=" + query;
 
   const { data: recipes, isPending, error } = useFetch(url);
 

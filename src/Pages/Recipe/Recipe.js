@@ -4,7 +4,7 @@ import "./Recipe.css";
 
 export default function Recipe() {
   const { id } = useParams();
-  const url = "http://localhost:3000/recipes/" + id;
+  const url = "https://database-nis.netlify.app/db.json/" + id;
   const { data: recipe, isPending, error } = useFetch(url);
   return (
     <div>
