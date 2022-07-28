@@ -29,7 +29,6 @@ export default function RecipeList({
   if (recipes.length === 0)
     return <div className="error">No Recipies to Load...</div>;
 
-  console.log(typeof recipes);
   return (
     <div className="recipe-container">
       {recipes.map((recipe) => (
