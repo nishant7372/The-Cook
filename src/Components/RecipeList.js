@@ -26,7 +26,7 @@ export default function RecipeList({
     }
   }, [bgTheme]);
 
-  newRecipes = Array.from(recipes);
+  const newRecipes = Array.from(recipes);
 
   if (newRecipes.length === 0)
     return <div className="error">No Recipies to Load...</div>;
