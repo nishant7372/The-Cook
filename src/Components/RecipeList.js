@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 export default function RecipeList({
-  recipes,
+  data,
   btnBgTheme,
   btnFontTheme,
   bgTheme,
@@ -26,28 +26,24 @@ export default function RecipeList({
     }
   }, [bgTheme]);
 
-  if (recipes.length === 0)
-    return <div className="error">No Recipies to Load...</div>;
-
-  console.log(recipes);
   return (
     <div className="recipe-container">
-      {recipes["recipes"].map((recipe) => (
-        <div key={recipe.id} className="recipe-card">
-          <h2 className="Title">{recipe.title}</h2>
-          <p className="cookingTime">{recipe.cookingTime} to make</p>
-          <p className="description">
-            {recipe.method.substring(0, 100) + "..."}
-          </p>
-          <Link
-            to={`/recipe/${recipe.id}`}
-            className={`${btnBg} ${btnFont} ${btnBgTheme} ${btnFontTheme}`}
-          >
-            Cook This
-          </Link>
-        </div>
-      ))}
-      ;
+      {data &&
+        data.map((recipe) => (
+          <div key={recipe.id} className="recipe-card">
+            <h2 className="Title">{recipe.title}</h2>
+            <p className="cookingTime">{recipe.cookingTime} to make</p>
+            <p className="description">
+              {recipe.method.substring(0, 100) + "..."}
+            </p>
+            <Link
+              to={`/recipe/${recipe.id}`}
+              className={`${btnBg} ${btnFont} ${btnBgTheme} ${btnFontTheme}`}
+            >
+              Cook This
+            </Link>
+          </div>
+        ))}
     </div>
   );
 }

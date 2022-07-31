@@ -1,11 +1,33 @@
+import { projectFirestore } from "../../firebase/config";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useFetch } from "../../Hooks/useFetch";
 import "./Recipe.css";
 
 export default function Recipe() {
   const { id } = useParams();
-  const url = "https://database-nis.netlify.app/db.json/" + id;
-  const { data: recipe, isPending, error } = useFetch(url);
+
+  const [recipe, setRecipe] = useState(null);
+  const [isPending, setIsPending] = useState(false);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    setIsPending(true);
+
+    projectFirestore
+      .collection("recipies")
+      .doc(id)
+      .get()
+      .then((doc) => {
+        if (doc.exists) {
+          setIsPending(false);
+          setRecipe(doc.data());
+        } else {
+          setIsPending(false);
+          setError("Could not find that recipe");
+        }
+      });
+  }, [id]);
+
   return (
     <div>
       {error && <div className="error">{error}</div>}

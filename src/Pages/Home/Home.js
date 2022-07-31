@@ -1,20 +1,44 @@
 import "./Home.css";
-import { useFetch } from "../../Hooks/useFetch";
 import RecipeList from "../../Components/RecipeList";
-export default function Home({ btnBgTheme, btnFontTheme }) {
-  const {
-    data: recipes,
-    isPending,
-    error,
-  } = useFetch("https://database-nis.netlify.app/db.json");
+import { projectFirestore } from "../../firebase/config";
+import { useEffect, useState } from "react";
 
+export default function Home({ btnBgTheme, btnFontTheme }) {
+  const [data, setData] = useState(null);
+  const [isPending, setIsPending] = useState(false);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    setIsPending(true);
+
+    projectFirestore
+      .collection("recipies")
+      .get()
+      .then((snapshot) => {
+        if (snapshot.empty) {
+          setError("No Recipies to Load...");
+          setIsPending(false);
+        } else {
+          let results = [];
+          snapshot.docs.forEach((doc) => {
+            results.push({ id: doc.id, ...doc.data() });
+          });
+          setData(results);
+          setIsPending(false);
+        }
+      })
+      .catch((err) => {
+        setError(err.message);
+        setIsPending(false);
+      });
+  }, []);
   return (
     <div>
       {error && <div className="error">{error}</div>}
       {isPending && <div className="loading">Loading...</div>}
-      {recipes && (
+      {data && (
         <RecipeList
-          recipes={recipes}
+          data={data}
           btnBgTheme={btnBgTheme}
           btnFontTheme={btnFontTheme}
         />

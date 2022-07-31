@@ -18,7 +18,7 @@ export default function Searchbar() {
         e.preventDefault();
       }}
     >
-      <img src="img/search.png" alt="search" />
+      <img src={require("../img/search.png")} alt="search" />
       <input
         type="text"
         placeholder="Search..."

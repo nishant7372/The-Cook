@@ -7,7 +7,7 @@ export default function Navbar({ bgTheme, theme }) {
     <div>
       <nav className={`navbar ${bgTheme}`}>
         <div className="left-section">
-          <img src="img/logo.png" alt="logo" />
+          <img src={require("../img/logo.png")} alt="logo" />
           <h1>The Cook</h1>
         </div>
         <div className="right-section">
