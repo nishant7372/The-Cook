@@ -36,6 +36,7 @@
   justify-content: flex-end;
   margin-top: 20px;
   width: 90vw;
+  min-width: 315px;
 }
 
 /*-----------------------------------------*/
@@ -78,16 +79,19 @@
 .bg-light-default,
 .bg-btn-light-default {
   background-color: var(--light-blue);
+  transition: all 0.3s ease-in-out;
 }
 
 .bg-light-red,
 .bg-btn-light-red {
   background-color: var(--light-red);
+  transition: all 0.3s ease-in-out;
 }
 
 .bg-light-green,
 .bg-btn-light-green {
   background-color: var(--light-green);
+  transition: all 0.3s ease-in-out;
 }
 
 /*----------------------------------------*/

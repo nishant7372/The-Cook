@@ -16,49 +16,61 @@ import ThemeSelector from "./Components/ThemeSelector";
 /*-------------------------------------------------------------------------------------*/
 
 function App() {
-  const [btnBgTheme, setBtnBgTheme] = useState("bg-btn-light-default");
-  const [btnFontTheme, setBtnFontTheme] = useState("font-btn-light-default");
-  const [bgTheme, setBgTheme] = useState("bg-default");
-  const [theme, setTheme] = useState("default");
-  const handleThemeClick = (btnBg, btnFont, bg, font) => {
-    setBtnBgTheme(btnBg);
-    setBtnFontTheme(btnFont);
-    setBgTheme(bg);
-    setTheme(font);
+  const btnBgTheme = [
+    "bg-btn-light-default",
+    "bg-btn-light-red",
+    "bg-btn-light-green",
+  ];
+  const btnFontTheme = [
+    "font-btn-light-default",
+    "font-btn-light-red",
+    "font-btn-light-green",
+  ];
+  const bodyBgTheme = ["bg-light-default", "bg-light-red", "bg-light-green"];
+  const bgTheme = ["bg-default", "bg-red", "bg-green"];
+  const theme = ["default", "red", "green"];
+  const [index, setIndex] = useState(0);
+  const [prevIndex, setPrevIndex] = useState(-1);
+
+  const handleThemeClick = (index) => {
+    setIndex((prevIndex) => {
+      setPrevIndex(prevIndex);
+      return index;
+    });
   };
 
   useEffect(() => {
-    if (bgTheme === "bg-default") {
-      document.body.classList.remove("bg-light-red");
-      document.body.classList.remove("bg-light-green");
-      document.body.classList.add("bg-light-default");
-    }
-    if (bgTheme === "bg-red") {
-      document.body.classList.remove("bg-light-green");
-      document.body.classList.remove("bg-light-default");
-      document.body.classList.add("bg-light-red");
-    }
-    if (bgTheme === "bg-green") {
-      document.body.classList.remove("bg-light-default");
-      document.body.classList.remove("bg-light-red");
-      document.body.classList.add("bg-light-green");
-    }
-  }, [bgTheme]);
+    document.body.classList.remove(bodyBgTheme[prevIndex]);
+    document.body.classList.add(bodyBgTheme[index]);
+  }, [index]);
 
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar bgTheme={bgTheme} theme={theme} />
+        <Navbar bgTheme={bgTheme} theme={theme} index={index} />
         <ThemeSelector handleThemeClick={handleThemeClick} />
         <Routes>
           <Route
             path="/"
             element={
-              <Home btnBgTheme={btnBgTheme} btnFontTheme={btnFontTheme} />
+              <Home
+                btnBgTheme={btnBgTheme}
+                btnFontTheme={btnFontTheme}
+                index={index}
+              />
             }
           ></Route>
           <Route path="/create" element={<Create />}></Route>
-          <Route path="/search" element={<Search bgTheme={bgTheme} />}></Route>
+          <Route
+            path="/search"
+            element={
+              <Search
+                btnBgTheme={btnBgTheme}
+                btnFontTheme={btnFontTheme}
+                index={index}
+              />
+            }
+          ></Route>
           <Route path="/recipe/:id" element={<Recipe />}></Route>
         </Routes>
       </BrowserRouter>

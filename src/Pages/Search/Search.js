@@ -4,7 +4,7 @@ import RecipeList from "../../Components/RecipeList";
 import "./Search.css";
 import { projectFirestore } from "../../firebase/config";
 
-export default function Search({ bgTheme }) {
+export default function Search({ btnBgTheme, btnFontTheme, index }) {
   const queryString = useLocation().search;
   const queryParams = new URLSearchParams(queryString);
   const query = queryParams.get("q");
@@ -53,7 +53,14 @@ export default function Search({ bgTheme }) {
       <h2 className="search-title">Recipies including "{query}"</h2>
       {error && <div className="error">{error}</div>}
       {isPending && <div className="loading">{isPending}</div>}
-      {data && <RecipeList data={data} bgTheme={bgTheme} />}
+      {data && (
+        <RecipeList
+          data={data}
+          btnBgTheme={btnBgTheme}
+          btnFontTheme={btnFontTheme}
+          index={index}
+        />
+      )}
     </div>
   );
 }

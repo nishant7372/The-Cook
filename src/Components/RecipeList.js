@@ -1,31 +1,7 @@
 import "./RecipeList.css";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
 
-export default function RecipeList({
-  data,
-  btnBgTheme,
-  btnFontTheme,
-  bgTheme,
-}) {
-  const [btnBg, setBtnBg] = useState("bg-btn-light-default");
-  const [btnFont, SetBtnFont] = useState("font-btn-light-default");
-
-  useEffect(() => {
-    if (bgTheme === "bg-default") {
-      setBtnBg("bg-btn-light-default");
-      SetBtnFont("font-btn-light-default");
-    }
-    if (bgTheme === "bg-red") {
-      setBtnBg("bg-btn-light-red");
-      SetBtnFont("font-btn-light-red");
-    }
-    if (bgTheme === "bg-green") {
-      setBtnBg("bg-btn-light-green");
-      SetBtnFont("font-btn-light-green");
-    }
-  }, [bgTheme]);
-
+export default function RecipeList({ data, btnBgTheme, btnFontTheme, index }) {
   return (
     <div className="recipe-container">
       {data &&
@@ -38,7 +14,7 @@ export default function RecipeList({
             </p>
             <Link
               to={`/recipe/${recipe.id}`}
-              className={`${btnBg} ${btnFont} ${btnBgTheme} ${btnFontTheme}`}
+              className={`${btnBgTheme[index]} ${btnFontTheme[index]}`}
             >
               Cook This
             </Link>

@@ -3,7 +3,7 @@ import RecipeList from "../../Components/RecipeList";
 import { projectFirestore } from "../../firebase/config";
 import { useEffect, useState } from "react";
 
-export default function Home({ btnBgTheme, btnFontTheme }) {
+export default function Home({ btnBgTheme, btnFontTheme, index }) {
   const [data, setData] = useState(null);
   const [isPending, setIsPending] = useState(false);
   const [error, setError] = useState(false);
@@ -41,6 +41,7 @@ export default function Home({ btnBgTheme, btnFontTheme }) {
           data={data}
           btnBgTheme={btnBgTheme}
           btnFontTheme={btnFontTheme}
+          index={index}
         />
       )}
     </div>

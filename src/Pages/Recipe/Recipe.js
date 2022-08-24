@@ -36,7 +36,7 @@ export default function Recipe() {
         <div className="recipe-box">
           <h1>{recipe.title}</h1>
           <p className="cookingTime">Take {recipe.cookingTime} to cook</p>
-          <ul>
+          <ul className="ingredients">
             {recipe.ingredients.map((ing, index) => (
               <li key={index}>{ing}</li>
             ))}
