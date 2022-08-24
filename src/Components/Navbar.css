@@ -4,6 +4,7 @@
   align-items: center;
   color: white;
   padding: 10px;
+  transition: all 0.3s ease-in-out;
 }
 
 .left-section {
@@ -34,13 +35,10 @@
   padding: 4px 10px;
   font-weight: 500;
   color: white;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.right-section a:hover {
-  background-color: white;
-}
-
+.right-section a:hover,
 .right-section a.active {
   background-color: white;
 }

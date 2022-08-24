@@ -1,3 +1,27 @@
+:root {
+  --light-blue: rgba(51, 51, 51, 0.2);
+  --light-red: rgba(234, 25, 25, 0.2);
+  --light-green: rgba(0, 128, 0, 0.2);
+  --light-blue-hover: rgba(51, 51, 51, 0.3);
+  --light-red-hover: rgba(234, 25, 25, 0.3);
+  --light-green-hover: rgba(0, 128, 0, 0.3);
+  --font-light-blue: rgba(51, 51, 51, 0.65);
+  --font-light-red: rgba(234, 25, 25, 0.65);
+  --font-light-green: rgba(0, 128, 0, 0.65);
+  --font-light-blue-hover: rgba(51, 51, 51, 0.8);
+  --font-light-red-hover: rgba(234, 25, 25, 0.8);
+  --font-light-green-hover: rgba(0, 128, 0, 0.8);
+  --blue: #54289c;
+  --red: rgb(204, 10, 10, 0.9);
+  --green: rgba(0, 128, 0, 0.9);
+  --success: rgba(0, 128, 0, 0.8);
+  --success-hover: rgba(0, 128, 0, 0.95);
+  --warning: rgba(255, 0, 0, 0.8);
+  --warning-hover: rgba(255, 0, 0, 0.95);
+  --reset: rgb(6, 143, 197, 0.85);
+  --reset-hover: rgb(6, 143, 197, 0.95);
+}
+
 /*----------Theme Button Styles----------*/
 
 .theme-btn {
@@ -19,13 +43,13 @@
 /*--------Navbar Background Styles---------*/
 
 .bg-default {
-  background-color: #54289c;
+  background-color: var(--blue);
 }
 .bg-red {
-  background-color: rgb(204, 10, 10);
+  background-color: var(--red);
 }
 .bg-green {
-  background-color: rgba(0, 128, 0, 0.9);
+  background-color: var(--green);
 }
 
 /*----------------------------------------*/
@@ -34,61 +58,52 @@
 
 .default.active,
 .default:hover {
-  color: #54289c;
+  color: var(--blue);
 }
 
 .red.active,
 .red:hover {
-  color: rgb(204, 10, 10);
+  color: var(--red);
 }
 
 .green.active,
 .green:hover {
-  color: green;
+  color: var(--green);
 }
 
 /*----------------------------------------*/
 
-/*--------Body Background Styles---------*/
+/*--------Body Background Styles, Button Background Styles---------*/
 
-.bg-light-default {
-  background-color: rgba(51, 51, 51, 0.2);
-}
-
-.bg-light-red {
-  background-color: rgba(234, 25, 25, 0.18);
-}
-
-.bg-light-green {
-  background-color: rgba(0, 128, 0, 0.19);
-}
-
-/*----------------------------------------*/
-
-/*--------Button Background Styles---------*/
-
+.bg-light-default,
 .bg-btn-light-default {
-  background-color: rgba(51, 51, 51, 0.2);
+  background-color: var(--light-blue);
 }
 
+.bg-light-red,
 .bg-btn-light-red {
-  background-color: rgba(234, 25, 25, 0.18);
+  background-color: var(--light-red);
 }
 
+.bg-light-green,
 .bg-btn-light-green {
-  background-color: rgba(0, 128, 0, 0.19);
+  background-color: var(--light-green);
 }
+
+/*----------------------------------------*/
+
+/*--------Button Background Styles on Hovering---------*/
 
 .bg-btn-light-default:hover {
-  background-color: rgba(51, 51, 51, 0.3);
+  background-color: var(--light-blue-hover);
 }
 
 .bg-btn-light-red:hover {
-  background-color: rgba(234, 25, 25, 0.28);
+  background-color: var(--light-red-hover);
 }
 
 .bg-btn-light-green:hover {
-  background-color: rgba(0, 128, 0, 0.29);
+  background-color: var(--light-green-hover);
 }
 
 /*----------------------------------------*/
@@ -96,27 +111,27 @@
 /*--------Button Font Styles---------*/
 
 .font-btn-light-default {
-  color: rgba(51, 51, 51, 0.65);
+  color: var(--font-light-blue);
 }
 
 .font-btn-light-red {
-  color: rgba(234, 25, 25, 0.65);
+  color: var(--font-light-red);
 }
 
 .font-btn-light-green {
-  color: rgba(0, 128, 0, 0.65);
+  color: var(--font-light-green);
 }
 
 .font-btn-light-default:hover {
-  color: rgba(51, 51, 51, 0.8);
+  color: var(--font-light-blue-hover);
 }
 
 .font-btn-light-red:hover {
-  color: rgba(234, 25, 25, 0.8);
+  color: var(--font-light-red-hover);
 }
 
 .font-btn-light-green:hover {
-  color: rgba(0, 128, 0, 0.8);
+  color: var(--font-light-green-hover);
 }
 
 /*----------------------------------------*/

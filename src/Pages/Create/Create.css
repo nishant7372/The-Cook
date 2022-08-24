@@ -53,7 +53,7 @@
   height: 35px;
   margin-top: 10px;
   border: none;
-  background-color: rgba(0, 128, 0, 0.793);
+  background-color: var(--success);
   color: white;
   border-radius: 4px;
   font-size: medium;
@@ -61,7 +61,7 @@
 }
 
 .form-container button:hover {
-  background-color: green;
+  background-color: var(--success-hover);
   transform: scale(1.05);
 }
 
@@ -91,11 +91,11 @@
 }
 
 .btn .reset {
-  background-color: rgb(6, 143, 197);
+  background-color: var(--reset);
 }
 
 .btn .reset:hover {
-  background-color: rgb(11, 111, 150);
+  background-color: var(--reset-hover);
 }
 
 .form-container p {
@@ -104,9 +104,9 @@
 }
 
 .ingredients .warning {
-  background-color: rgba(255, 0, 0, 0.727);
+  background-color: var(--warning);
 }
 
 .ingredients .warning:hover {
-  background-color: rgba(255, 0, 0, 0.827);
+  background-color: var(--warning-hover);
 }

@@ -1,12 +1,19 @@
+// CSS Import
 import "./App.css";
-import Navbar from "./Components/Navbar";
+
+// React Imports
+import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+//Components Import
+import Navbar from "./Components/Navbar";
 import Create from "./Pages/Create/Create";
 import Home from "./Pages/Home/Home";
 import Search from "./Pages/Search/Search";
 import Recipe from "./Pages/Recipe/Recipe";
-import { useEffect, useState } from "react";
 import ThemeSelector from "./Components/ThemeSelector";
+
+/*-------------------------------------------------------------------------------------*/
 
 function App() {
   const [btnBgTheme, setBtnBgTheme] = useState("bg-btn-light-default");
