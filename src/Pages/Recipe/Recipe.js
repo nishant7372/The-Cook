@@ -4,6 +4,18 @@ import { useParams } from "react-router-dom";
 import "./Recipe.css";
 
 export default function Recipe() {
+  const alertUser = (e) => {
+    e.preventDefault();
+    e.returnValue = "";
+  };
+
+  useEffect(() => {
+    window.addEventListener("beforeunload", alertUser);
+    return () => {
+      window.removeEventListener("beforeunload", alertUser);
+    };
+  }, []);
+
   const { id } = useParams();
 
   const [recipe, setRecipe] = useState(null);

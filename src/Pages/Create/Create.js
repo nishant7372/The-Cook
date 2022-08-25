@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Create.css";
 import { projectFirestore } from "../../firebase/config";
@@ -11,6 +11,18 @@ export default function Create() {
   const [newIngredient, setNewIngredient] = useState("");
   const ingredientInput = useRef(null);
   const navigate = useNavigate();
+
+  const alertUser = (e) => {
+    e.preventDefault();
+    e.returnValue = "";
+  };
+
+  useEffect(() => {
+    window.addEventListener("beforeunload", alertUser);
+    return () => {
+      window.removeEventListener("beforeunload", alertUser);
+    };
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
