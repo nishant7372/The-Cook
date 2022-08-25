@@ -15,6 +15,7 @@ export default function Create() {
   const alertUser = (e) => {
     e.preventDefault();
     e.returnValue = "";
+    navigate("/");
   };
 
   useEffect(() => {
