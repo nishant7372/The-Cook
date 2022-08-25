@@ -7,7 +7,7 @@ export default function Navbar({ bgTheme, theme, index }) {
     <div className={`sticky ${bgTheme[index]}`}>
       <nav className={`navbar`}>
         <div className="left-section">
-          <img src={require("../img/logo.png")} alt="logo" />
+          <img src={require(`../img/logo${index}.png`)} alt="logo" />
           <h1>The Cook</h1>
         </div>
         <div className="right-section">

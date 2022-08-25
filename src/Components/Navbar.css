@@ -3,16 +3,16 @@
   justify-content: space-between;
   align-items: center;
   color: white;
-  transition: all 0.3s ease-in-out;
   min-width: 350px;
-  max-width: 1400px;
+  max-width: 1450px;
   margin: auto;
 }
 
 .sticky {
+  transition: all 0.3s ease-in-out;
   position: sticky;
   top: 0;
-  z-index: 400;
+  z-index: 2;
 }
 
 @media screen and (max-width: 800px) {
