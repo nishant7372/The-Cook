@@ -5,6 +5,14 @@
   color: white;
   transition: all 0.3s ease-in-out;
   min-width: 350px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 400;
 }
 
 @media screen and (max-width: 800px) {
@@ -27,10 +35,10 @@
     padding: 10px;
   }
   .left-section {
-    margin-left: 40px;
+    margin-left: 50px;
   }
   .right-section {
-    margin-right: 80px;
+    margin-right: 50px;
   }
 }
 

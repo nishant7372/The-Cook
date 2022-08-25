@@ -10,6 +10,11 @@ export default function Recipe() {
   const [isPending, setIsPending] = useState(false);
   const [error, setError] = useState(false);
 
+  const parseMethod = (method) => {
+    const splitted = method.split("#");
+    return splitted;
+  };
+
   useEffect(() => {
     setIsPending(true);
 
@@ -41,7 +46,14 @@ export default function Recipe() {
               <li key={index}>{ing}</li>
             ))}
           </ul>
-          <p className="method">{recipe.method}</p>
+          <ul className="method">
+            {parseMethod(recipe.method).map((step, index) => (
+              <li key={index}>
+                <b>{step.substring(0, step.indexOf(".") + 1)}</b>{" "}
+                {step.substring(step.indexOf(".") + 1, step.length)}
+              </li>
+            ))}
+          </ul>
         </div>
       )}
     </div>

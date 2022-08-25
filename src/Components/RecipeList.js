@@ -10,7 +10,7 @@ export default function RecipeList({ data, btnBgTheme, btnFontTheme, index }) {
             <h2 className="Title">{recipe.title}</h2>
             <p className="cookingTime">{recipe.cookingTime} to make</p>
             <p className="description">
-              {recipe.method.substring(0, 100) + "..."}
+              {recipe.method.substring(0, 70).replace("#", "") + "..."}
             </p>
             <Link
               to={`/recipe/${recipe.id}`}

@@ -4,8 +4,8 @@ import Searchbar from "./Searchbar";
 
 export default function Navbar({ bgTheme, theme, index }) {
   return (
-    <div>
-      <nav className={`navbar ${bgTheme[index]}`}>
+    <div className={`sticky ${bgTheme[index]}`}>
+      <nav className={`navbar`}>
         <div className="left-section">
           <img src={require("../img/logo.png")} alt="logo" />
           <h1>The Cook</h1>

@@ -35,8 +35,11 @@
   gap: 10px;
   justify-content: flex-end;
   margin-top: 20px;
-  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  width: 88vw;
   min-width: 315px;
+  max-width: 1300px;
 }
 
 /*-----------------------------------------*/
