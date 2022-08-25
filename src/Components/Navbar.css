@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   color: white;
-  min-width: 350px;
+  min-width: 330px;
   max-width: 1450px;
   margin: auto;
 }
@@ -19,7 +19,7 @@
   .navbar {
     flex-direction: column;
     gap: 20px;
-    padding: 12px;
+    padding: 12px 0px;
   }
   .left-section {
     margin-left: 0px;

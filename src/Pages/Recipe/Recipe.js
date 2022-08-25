@@ -1,14 +1,12 @@
 import { projectFirestore } from "../../firebase/config";
 import { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "./Recipe.css";
 
 export default function Recipe() {
-  const navigate = useNavigate();
   const alertUser = (e) => {
     e.preventDefault();
     e.returnValue = "";
-    navigate("/");
   };
 
   useEffect(() => {

@@ -1,8 +1,6 @@
 .recipe-box {
   background-color: white;
-  width: 60vw;
   max-width: 1200px;
-  min-width: 280px;
   margin: 10vh auto;
   display: flex;
   flex-direction: column;
@@ -10,6 +8,18 @@
   gap: 30px;
   box-shadow: 2px 3px 3px #888;
   text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  .recipe-box {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .recipe-box {
+    width: 70vw;
+  }
 }
 
 .recipe-box .ingredients li {

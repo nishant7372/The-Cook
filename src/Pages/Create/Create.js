@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import "./Create.css";
 import { projectFirestore } from "../../firebase/config";
+import { useNavigate } from "react-router-dom";
 
 export default function Create() {
   const [title, setTitle] = useState("");
@@ -10,12 +10,11 @@ export default function Create() {
   const [ingredients, setIngredients] = useState([]);
   const [newIngredient, setNewIngredient] = useState("");
   const ingredientInput = useRef(null);
-  const navigate = useNavigate();
 
+  const navigate = useNavigate();
   const alertUser = (e) => {
     e.preventDefault();
     e.returnValue = "";
-    navigate("/");
   };
 
   useEffect(() => {
