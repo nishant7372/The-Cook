@@ -21,7 +21,7 @@
   content: ",";
 }
 
-.recipe-box li:last-child::after {
+.recipe-box .ingredients li:last-child::after {
   content: ".";
 }
 
