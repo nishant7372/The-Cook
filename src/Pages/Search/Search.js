@@ -15,10 +15,11 @@ export default function Search({ btnBgTheme, btnFontTheme, index }) {
 
   const find = (obj) => {
     for (const [key, value] of Object.entries(obj)) {
-      if (value.indexOf(query) >= 0) return true;
+      if (value.toLowerCase().indexOf(query.toLowerCase()) >= 0) return true;
       if (typeof value === typeof []) {
         for (let i = 0; i < value.length; i++)
-          if (value[i].indexOf(query) >= 0) return true;
+          if (value[i].toLowerCase().indexOf(query.toLowerCase()) >= 0)
+            return true;
       }
     }
     return false;
