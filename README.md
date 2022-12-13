@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 <p display="flex">
-  <img src="https://user-images.githubusercontent.com/91368799/207361499-588bc8a8-6260-4fbd-8811-da29f2e3d952.png" width="48%"/>
+  <img src="https://user-images.githubusercontent.com/91368799/207362221-22360c96-f882-4ee2-9f5a-86b4071fabb1.png" width="48%"/>
   <img src="https://user-images.githubusercontent.com/91368799/188254709-b5ae91f8-3369-45fc-b2b9-e9cc3fb2bd3d.png" width="48%"/>
   <img src="https://user-images.githubusercontent.com/91368799/188254406-44d14af9-f3b6-42f5-923d-befab2f1bc4f.png" width="96%"/> 
 </p>
